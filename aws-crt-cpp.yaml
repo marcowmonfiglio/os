@@ -86,3 +86,8 @@ update:
     identifier: awslabs/aws-crt-cpp
     strip-prefix: v
     use-tag: true
+
+test:
+  pipeline:
+    - runs: |
+        aws-crt-cpp --help || exit 1

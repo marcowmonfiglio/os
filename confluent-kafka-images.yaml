@@ -62,3 +62,8 @@ update:
   git:
     tag-filter-prefix: v
     strip-prefix: v
+
+test:
+  pipeline:
+    - runs: |
+        confluent-kafka-images --help || exit 1
